@@ -9,13 +9,12 @@ def get_bonus_pay_amount(sales):
         bonus_percentage = 0.06
     elif sales < 1500:
         bonus_percentage = 0.07
-    else:  # sales is between 1500 and 1999
+    else:  
         bonus_percentage = 0.08
 
     bonus_amount = sales * bonus_percentage
     return bonus_amount
 
-# Prompt the user for sales amount
 try:
     sales_input = float(input("Enter the sales amount: "))
     bonus = get_bonus_pay_amount(sales_input)
