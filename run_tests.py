@@ -58,3 +58,18 @@ def run_tests():
         print(f"Test passed for '{input_str}': '{result}'")
 
 run_tests()
+
+def use_local_variable(num):
+    num = 10
+    print("Inside the function, local num =", num)
+
+def test_case():
+    num = 100
+    print("Before calling the function, num =", num)
+
+    use_local_variable(num)
+
+    assert num == 100, f"Test failed: num should be 100 but is {num}"
+    print("After calling the function, num =", num)
+
+test_case()
