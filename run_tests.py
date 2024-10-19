@@ -35,3 +35,26 @@ result = get_miles_per_hour(kilometers, minutes)
 assert abs(result - expected_result) < 1e-6, f"Expected {expected_result}, but got {result}"
 
 print("Test passed!")
+
+def reverse_string(string1):
+    reversed_string = ""
+    index = len(string1) - 1  
+    
+    while index >= 0:  
+        reversed_string += string1[index]
+        index -= 1  
+    
+    return reversed_string
+
+def run_tests():
+    test_cases = {
+        "hello world": "dlrow olleh",
+        "hello": "olleh",
+    }
+    
+    for input_str, expected_output in test_cases.items():
+        result = reverse_string(input_str)
+        assert result == expected_output, f"Test failed for '{input_str}'. Expected '{expected_output}', but got '{result}'."
+        print(f"Test passed for '{input_str}': '{result}'")
+
+run_tests()
