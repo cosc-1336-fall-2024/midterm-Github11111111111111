@@ -25,3 +25,13 @@ def test_get_bonus_pay_amount():
 
 test_get_bonus_pay_amount()
 print("All tests passed!")
+
+def get_miles_per_hour():
+kilometers = 32
+minutes = 60
+expected_result = 19.883872
+result = get_miles_per_hour(kilometers, minutes)
+
+assert abs(result - expected_result) < 1e-6, f"Expected {expected_result}, but got {result}"
+
+print("Test passed!")
